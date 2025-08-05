@@ -4,6 +4,15 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
+// Admin Side
+import Dashboard from './pages/admin/Dashboard';
+import Donation from './pages/admin/Donation';
+import ContentManagement from './pages/admin/ContentManagement';
+import PetManagement from './pages/admin/PetManagement'; 
+import DataManagement from './pages/admin/DataManagement';
+import Message from './pages/admin/Message';
+import Settings from './pages/admin/Settings';
+
 function App() {
 
   return (
@@ -13,6 +22,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+
+          {/* Admin Side Routes */}
+          <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/admin/donation" element={<Donation />} />
+          <Route path="/admin/content-management" element={<ContentManagement />} />
+          <Route path="/admin/pet-management" element={<PetManagement />} />
+          <Route path="/admin/data-management" element={<DataManagement />} />
+          <Route path="/admin/messages" element={<Message />} />
+          <Route path="/admin/settings" element={<Settings />} />
         </Routes>
       </Router>
     </>
