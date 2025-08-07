@@ -33,7 +33,7 @@ export default function TestimonialsSection() {
   
      const PetCard = ({ pet }) => {
       return (
-        <div className="bg-white border-2 relative border-black rounded-3xl  shadow-lg max-w-sm mx-auto">
+        <div className="bg-white border-2 relative border-black rounded-3xl shadow-lg max-w-sm mx-auto duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
           {/* Image section with overlays */}
           <div className="relative">
             {/* Pet image placeholder */}

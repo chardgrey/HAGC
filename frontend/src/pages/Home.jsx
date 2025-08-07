@@ -7,11 +7,13 @@ import TestimonialsSection from '@/compontents/Home/TestimonialsSection';
 import BlogSection from '@/compontents/Home/BlogSection'; 
 import FAQSection from '@/compontents/Home/FAQSection';
 import Footer from '@/compontents/Layout/Footer';
+import FloatButton from '@/compontents/Layout/FloatButton';
 
 function Home() {
   return (
     <div>
       <Navbar />
+      <FloatButton />
       
       <HeroSection />
       <CardSection />

@@ -161,7 +161,7 @@ export default function BlogSection() {
       {/* View More button only if more than 8 cards */}
       {showViewMore && (
         <div className='flex justify-center mt-10 relative z-20'>
-          <button className='bg-[#F2786D] hover:bg-red-100 text-2xl text-white py-3 px-8 rounded-3xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-lg'>
+          <button className='bg-[#F2786D] hover:bg-[#f26d6d] text-2xl text-white py-3 px-8 rounded-3xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-lg transform hover:-translate-y-1'>
             View More Blogs
           </button>
         </div>

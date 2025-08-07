@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '@/assets/processimg.svg'
+import image from '@/assets/processimg.png'
 import paw from '@/assets/paw.svg'
 import { FaSearch, FaFileAlt, FaHeart, FaCheckCircle, FaHome } from 'react-icons/fa';
 
@@ -91,11 +91,10 @@ export default function ProcessSection() {
                 Paw-Someee!
               </span>
             </div>
-            <div className="bg-[#F2786D] rounded-l-[60px] w-full h-full min-h-[600px] lg:min-h-[700px] flex items-center justify-center p-0 m-0">
+            <div className="bg-[#F2786D] relative rounded-l-[60px] w-full h-full min-h-[600px] lg:min-h-[700px] flex items-center justify-center p-0 m-0">
               {/* glowing orb */}
               <div className="absolute w-64 h-64 md:w-80 md:h-80 bg-[#eac7c4] rounded-full blur-3xl opacity-100 z-0"></div>
-
-              <div className="relative w-full h-full flex items-center justify-center">
+              <div className="absolute bottom-0 w-full h-full flex items-center justify-center">
                 {/* Large image fills right side */}
                 <img src={image} alt="" className="w-full h-full object-contain max-h-[700px]" />
               </div>

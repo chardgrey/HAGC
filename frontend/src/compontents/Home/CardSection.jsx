@@ -106,8 +106,8 @@ export default function CardSection() {
           </button>
           
           {/* Adopt Me button centered at bottom border */}
-          <button className="w-fit absolute left-1/2 bottom-0 translate-x-[-50%] translate-y-[50%] bg-[#4FA3D1] text-white py-3 px-8 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all duration-300 shadow-lg">
-            <FaHandHoldingHeart className="w-8 h-8" />
+          <button className="w-fit absolute left-1/2 bottom-0 translate-x-[-50%] translate-y-[50%] bg-[#4FA3D1] text-white py-2 px-3 md:px-8 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all duration-300 shadow-lg transform hover:translate-y-[40%]">
+            <FaHandHoldingHeart className="w-7 h-7" />
             Adopt Me!
           </button>
         </div>
@@ -138,7 +138,7 @@ export default function CardSection() {
       </div>
       
       <div className='flex justify-center mt-20'>
-        <button className='bg-[#4FA3D1] z-20 hover:bg-red-100 text-2xl text-white py-3 px-8 rounded-3xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-lg'>
+        <button className='bg-[#4FA3D1] z-20 hover:bg-[#4f8ed1] text-2xl text-white py-3 px-8 rounded-3xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-lg transform hover:-translate-y-1'>
           View More
         </button>
       </div>
