@@ -9,13 +9,15 @@ const Navbar = () => {
   const isAuthenticated = false;
 
   return (
-    <nav className="w-full bg-white shadow-md fixed rounded-bl-2xl rounded-br-2xl top-0 left-0 z-50">
+    <nav className="w-full bg-white shadow-md sticky top-0 rounded-b-2xl left-0 z-50 px-2 sm:px-0">
       <div className="max-w-7xl mx-auto fredoka">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <img src={Logo} alt="Logo" className="h-8 w-auto" />
-            <span className=" text-[#F2786D] ml-2">Stray to Safe</span>
+            <Link to="/" className="flex items-center">
+              <img src={Logo} alt="Logo" className="h-8 w-auto" />
+              <span className=" text-[#F2786D] ml-2">Stray to Safe</span>
+            </Link>
           </div>
 
           {/* Burger menu for mobile */}
@@ -44,10 +46,10 @@ const Navbar = () => {
           {/* Nav links & buttons */}
           <div className="hidden lg:flex flex-1 items-center justify-center">
             <ul className="flex space-x-6">
-              <li><a href="#" className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Home</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Adopt a Pet</a></li>
+              <li><Link to={"/"} className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Home</Link></li>
+              <li><Link to={"/adopt-a-pet"} className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Adopt a Pet</Link></li>
               <li><a href="#" className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Blog</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Donate</a></li>
+              <li><Link to={"/donate"} className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Donate</Link></li>
             </ul>
           </div>
 
@@ -55,10 +57,11 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link to={"/login"} className="px-4 py-2 text-[#4FA3D1] rounded hover:bg-blue-50 font-medium">Login</Link>
             <Link to={"/register"} className="px-6 py-2 bg-[#4FA3D1] text-white rounded-2xl hover:bg-[#4f94d1] font-medium">Sign Up</Link>
+            
             {/* Hidden for future auth */}
             {isAuthenticated && (
               <>
-                <button className="px-4 py-2 text-gray-700 border border-gray-300 rounded hover:bg-gray-100 font-medium">Profile</button>
+                <button className="px-4 py-2 text-[#4FA3D1] border border-[#4FA3D1] rounded hover:bg-gray-100 font-medium">Profile</button>
                 <button className="px-4 py-2 text-red-600 border border-red-600 rounded hover:bg-red-50 font-medium">Log Out</button>
               </>
             )}
@@ -68,15 +71,17 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white shadow-md">
+        <div className="lg:hidden ">
           <ul className="px-2 pt-2 pb-3 space-y-1">
-            <li><a href="#" className="block px-3 py-2 rounded text-gray-700 hover:bg-blue-50">Home</a></li>
-            <li><a href="#" className="block px-3 py-2 rounded text-gray-700 hover:bg-blue-50">About</a></li>
-            <li><a href="#" className="block px-3 py-2 rounded text-gray-700 hover:bg-blue-50">Contact</a></li>
+            <li><Link to={"/"} className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Home</Link></li>
+            <li><Link to={"/adopt-a-pet"} className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Adopt a Pet</Link></li>
+            <li><a href="#" className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Blog</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-[#4FA3D1] hover:underline transition-all ease-in-out duration-300 font-medium">Donate</a></li>
           </ul>
           <div className="px-4 pb-4 flex flex-col space-y-2">
-            <button className="w-full px-4 py-2 text-blue-600 border border-blue-600 rounded hover:bg-blue-50 font-medium">Login</button>
-            <button className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 font-medium">Sign Up</button>
+            <button className="w-full px-4 py-2 text-[#4FA3D1] border border-[#4FA3D1] rounded hover:bg-blue-50 font-medium">Login</button>
+            <button className="w-full px-4 py-2 bg-[#4FA3D1] text-white rounded hover:bg-blue-700 font-medium">Sign Up</button>
+            
             {/* Hidden for future auth */}
             {isAuthenticated && (
               <>

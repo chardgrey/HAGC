@@ -1,5 +1,6 @@
 import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
-import logo from "@/assets/Logo2.svg"; // Replace with your actual logo path
+import logo from "@/assets/Logo2.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -11,9 +12,9 @@ const Footer = () => {
         <div className="flex flex-col items-left gap-4 space-x-4">
           <img src={logo} alt="Logo" className="h-15 w-auto" />
 
-           <button className="bg-[#4FA3D1] text-white px-5 py-2 rounded-full shadow font-semibold hover:bg-opacity-90 transition">
+           <Link to="/adopt-a-pet" className="bg-[#4FA3D1] text-white px-5 py-2 w-fit rounded-full shadow font-semibold hover:bg-opacity-90 transition transform hover:-translate-y-1">
             Adopt a pet
-          </button>
+          </Link>
         </div>
 
 

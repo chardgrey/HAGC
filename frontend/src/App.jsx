@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import AdoptAPet from './pages/AdoptAPet';
+import Donate   from './pages/Donate';
 
 // Admin Side
 import Dashboard from './pages/admin/Dashboard';
@@ -22,6 +24,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/adopt-a-pet" element={<AdoptAPet />} />
+          <Route path="/donate" element={<Donate />} />
 
           {/* Admin Side Routes */}
           <Route path="/admin/dashboard" element={<Dashboard />} />
